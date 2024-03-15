@@ -1,6 +1,6 @@
 Dataset/
 models/
-run/
+runs/
 venv/
-.yolo8l.pt
-.yolo8n.pt
+yolo8l.pt
+yolo8n.pt
