@@ -1,0 +1,6 @@
+Dataset/
+models/
+run/
+venv/
+.yolo8l.pt
+.yolo8n.pt
