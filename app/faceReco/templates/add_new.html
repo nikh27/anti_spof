@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(251, 240, 223);
+        }
+        .page{
+            /* height:600px; */
+            max-width:900px;
+            /* border:2px solid black; */
+            margin:0 auto;
+            /* border-radius: 3%; */
+            
+        }
+        
+        .box{
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            margin:0 auto;
+            margin-top: 50px;
+            border-radius: 10px;
+            /* display:inline-block; */
+            box-shadow: -20px 30px 20px 5px rgb(115, 106, 106);
+        }
+        .small{
+            font-size: 18px;
+        }
+        #form-container{
+            /* background-color: aqua; */
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .button{
+            margin-left: 80px;
+        }
+        button{
+            border-radius: 10px;
+            height:30px;
+            width:100px;
+            background-color:red;
+            color:white;
+        }
+        button:hover{
+            background-color: green;
+            box-shadow: -2px 3px 5px 1px grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <Div class="box">
+            <h1>Add New User 
+                <span class="small">(Student Only)</span>
+            </h1>
+            <br>
+            <form>
+                <div id="form-container">
+                    <form action="{% url 'add' %}" method="POST">
+                        {% csrf_token %}
+                        <label for="newusername">Username:</label>
+                        <input type="text" id="newusername" name="newusername" required><br><br>
+                        
+                        <label for="newuserid">User ID:</label>
+                        <input type="text" id="newuserid" name="newuserid" required><br><br>
+                        
+                        <button type="submit">Add New User</button>
+                    </form>
+                    <!-- <div class="form-control">
+                        <label for="first_name">Name:</label>
+                        <input type="text" name="first" id="first_name" placeholder="Enter First Name...">
+                    </div>
+                    <br>
+
+                    <div class="form-control">
+                        <label for="email">Email Id</label>
+                        <input type="email" name="mail" id="email" placeholder="Enter your Email..." required="">
+                    </div>
+                    <br>
+                    <div class="form-control">
+                        <label for="select">Branch:</label>
+                        <select name="slect" id="select">
+                            <option value=""> Select Please</option>
+                                <option value="machine learning">Ai&Ml</option>
+                                <option value="devops">civil</option>
+                                <option value="networking">Ece</option>
+                                <option value="software">Cse</option>
+                                <option value="data science">Mechanical</option>
+                                <option value="cloud computing"></option>
+                            </option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-control">
+                        <label for="date">Start Date</label>
+                        <input type="date" id="date" name="gh">
+                    </div>
+                    <br>
+                </div>
+                <div class="button">
+                    <button type="submit">Add Now</button>
+                    <button type="submit">reset</button>
+                </div> -->
+            </form>
+        </Div>
+    </div>
+</body>
+</html>

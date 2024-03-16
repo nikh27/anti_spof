@@ -4,3 +4,4 @@ runs/
 venv/
 yolo8l.pt
 yolo8n.pt
+db.sqlite3

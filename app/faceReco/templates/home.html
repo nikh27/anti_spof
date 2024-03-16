@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    @keyframes slowGif {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+  }
+    
+    body {
+      background-image: url('/static/images/bg_home.gif');
+      /* Replace 'background.jpg' with the path to your image */
+      /* background-size: cover; */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 680px;
+      animation: slowGif 30s linear infinite;
+      margin: 0;
+      padding: 0;
+    }
+    .animate-charcter {
+      text-transform: uppercase;
+      background-image: linear-gradient(-225deg,
+          #231557 0%,
+          #44107a 29%,
+          #ff1361 67%,
+          #fff800 100%);
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+      font-size: 190px;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .sm {
+      width: 90%;
+      margin: auto;
+      font-weight: 900;
+      font-size: 80px;
+      margin-top: 100px;
+      margin-bottom: 60px;
+    }
+
+    #button {
+      font-size: 25px;
+      margin-left: 45%;
+      height: 40px;
+      width: 150px;
+      border-radius: 15px;
+      background-color: white;
+      text-align: center;
+      padding-top: 9px;
+      font-weight: 800;
+      user-select: none;
+      cursor: pointer;
+      /* color: rgb(223, 13, 13); */
+      /* box-shadow: 1px 1px 1px red; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="animate-charcter">
+          <div class="sm" style="text-align: center;">
+            Welcome To Face Recogination System</h5>
+          </div>
+        </div>
+       <a href="{% url 'main' %}" target="_blank" style="text-decoration: none;"> <p id="button">Start Here</p></a>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>

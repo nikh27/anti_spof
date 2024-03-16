@@ -1,0 +1,54 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+</head>
+<body>
+    <h1>Welcome to UIET</h1>
+    
+    <h2>Attendance Records</h2>
+    <p>Total Registered Users: {{ total_registered }}</p>
+    <p>Date: {{ datetoday2 }}</p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in attendance %}
+            <tr>
+                <td>{{ record.user.name }}</td>
+                <td>{{ record.user.roll }}</td>
+                <td>{{ record.time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <p>Total Registered Users: {{ total_registered }}</p>
+    <p>Date: {{ datetoday2 }}</p>
+    
+    <form action="{% url 'start' %}" method="GET">
+        <button type="submit">Take Attendance</button>
+    </form>
+    
+    <form action="{% url 'add' %}" method="POST">
+        {% csrf_token %}
+        <label for="newusername">Username:</label>
+        <input type="text" id="newusername" name="newusername" required><br><br>
+        
+        <label for="newuserid">User ID:</label>
+        <input type="text" id="newuserid" name="newuserid" required><br><br>
+        
+        <button type="submit">Add New User</button>
+    </form>
+</body>
+</html>
