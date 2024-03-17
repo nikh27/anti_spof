@@ -2,6 +2,7 @@ Dataset/
 models/
 runs/
 venv/
+combine/
+testing_script/
 yolo8l.pt
 yolo8n.pt
-db.sqlite3
