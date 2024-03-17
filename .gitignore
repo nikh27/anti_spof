@@ -1,8 +1,9 @@
+.idea/
 Dataset/
 models/
 runs/
 venv/
 combine/
-testing_script/
+test/
 yolo8l.pt
 yolo8n.pt
