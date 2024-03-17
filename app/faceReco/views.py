@@ -86,7 +86,6 @@ def detect_blurry_faces(frame, face_locations):
         blurry_faces.append(blur_score)
     return blurry_faces
 
-
 confidence = 0.6
 
 
@@ -94,7 +93,7 @@ def start(request):
     cap = cv2.VideoCapture(0)  # For Webcam
     cap.set(3, 640)
     cap.set(4, 480)
-    model = YOLO(r"C:\Users\nikhil pandey\Desktop\antispof\models\m_version_1_149.pt")
+    model = YOLO("m_version_1_149.pt")
 
     classNames = ["fake", "real"]
 
