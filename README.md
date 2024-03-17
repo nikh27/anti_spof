@@ -10,8 +10,10 @@ cd app
 
 pip install -r requirements.txt
 
-# issue face
+# issue face(if u face)
  i'm providing dlib binary files (only for windown 11)
+ for installing 
+ pip install dlib-19.24.1-cp311-cp311-win_amd64.whl
 
 # start server
 
