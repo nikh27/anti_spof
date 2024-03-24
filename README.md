@@ -1,3 +1,5 @@
+**How project work :- [youtube links](https://youtu.be/ZQdNEomgqmw?si=wwbeLx559NY6Dy49)**
+
 # first create virutal env
 
 python -m venv venv
