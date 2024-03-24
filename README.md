@@ -21,5 +21,8 @@ pip install -r requirements.txt
 
 python manage.py runserver
 
+** admin name - _nikhil_ ,
+password - _nikh123_ **
+
 ## enjoy.. face_recogntion system
 ***feel free so ask me anything :)***
