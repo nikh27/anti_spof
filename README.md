@@ -21,4 +21,5 @@ pip install -r requirements.txt
 
 python manage.py runserver
 
-enjoy.. face_recogntion system
+##enjoy.. face_recogntion system
+***feel free so ask me anything :)***
