@@ -1,4 +1,4 @@
-**How project work :- [Drive links]([https://youtu.be/ZQdNEomgqmw?si=wwbeLx559NY6Dy49](https://drive.google.com/file/d/1JDSiZuwBEyQocZIiuoo9_ujSOdqG2qmU/view?usp=sharing))**
+**How project work :- [Drive links]([https://youtu.be/ZQdNEomgqmw?si=wwbeLx559NY6Dy49](https://drive.google.com/file/d/1JDSiZuwBEyQocZIiuoo9_ujSOdqG2qmU/view?usp=sharing)**
 
 # first create virutal env
 
