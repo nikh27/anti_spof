@@ -84,7 +84,6 @@ def detect_blurry_faces(frame, face_locations):
         blurry_faces.append(blur_score)
     return blurry_faces
 
-
 confidence = 0.6
 
 
@@ -92,7 +91,7 @@ def start(request):
     cap = cv2.VideoCapture(0)  # For Webcam
     cap.set(3, 640)
     cap.set(4, 480)
-    model = YOLO(r"C:\Users\nikhil pandey\Desktop\antispof\models\m_version_1_149.pt")
+    model = YOLO("m_version_1_149.pt")
 
     classNames = ["fake", "real"]
 
@@ -139,6 +138,9 @@ def start(request):
                                 fontColor = (0, 255, 0)
                                 thickness = 2
                                 lineType = 2
+                                cvzone.putTextRect(img, "real photo",
+                                                  (max(0, x1), max(35, y1)), scale=1, thickness=2, colorR=color,
+                                                  colorB=color)
                                 cv2.putText(img, f'{name} present', bottomLeftCornerText, font, fontScale, fontColor,
                                             thickness, lineType)
                                 if name in students:
@@ -151,6 +153,7 @@ def start(request):
                                 #                 fontColor,
                                 #                 thickness, lineType)
 
+
                     else:
                         color = (0, 0, 255)
                         font = cv2.FONT_HERSHEY_SIMPLEX
@@ -161,11 +164,9 @@ def start(request):
                         lineType = 2
                         cv2.putText(img, "it's a fake face", bottomLeftCornerText, font, fontScale, fontColor, thickness,
                                     lineType)
-
-                    cvzone.cornerRect(img, (x1, y1, w, h), colorC=color, colorR=color)
-                    cvzone.putTextRect(img, f'{classNames[cls].upper()} {int(conf * 100)}%',
-                                       (max(0, x1), max(35, y1)), scale=2, thickness=4, colorR=color,
-                                       colorB=color)
+                        cvzone.putTextRect(img, "fake photo",
+                                           (max(0, x1), max(35, y1)), scale=1, thickness=2, colorR=color,
+                                           colorB=color)
 
         fps = 1 / (new_frame_time - prev_frame_time)
         prev_frame_time = new_frame_time
