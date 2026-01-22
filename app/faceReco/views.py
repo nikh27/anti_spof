@@ -54,8 +54,6 @@ known_face_names = known_names
 # Initialize list of expected faces
 students = known_names.copy()
 
-print("students", students)
-
 
 def home(request):
     return render(request, 'home.html')
@@ -108,7 +106,7 @@ def start(request):
         new_frame_time = time.time()
         success, img = cap.read()
         results = model(img, stream=True, verbose=False)
-        print("students ->",students)
+        # print("students ->",students)
         for r in results:
             boxes = r.boxes
             for box in boxes:
@@ -118,9 +116,7 @@ def start(request):
                 conf = math.ceil((box.conf[0] * 100)) / 100
                 cls = int(box.cls[0])
                 if conf > confidence:
-                    print(conf)  ####
                     if classNames[cls] == 'real':
-                        print("its reall haha")
                         color = (0, 255, 0)
                         # Face recognition
                         small_frame = cv2.resize(img[y1:y2, x1:x2], (0, 0), fx=0.25, fy=0.25)
